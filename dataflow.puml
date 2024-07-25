@@ -1,0 +1,31 @@
+@startuml
+
+rectangle "Centralized Grievance System Portal" as login
+rectangle "New User?" as newuser
+rectangle "User?" as User
+rectangle "Register" as register
+rectangle "Register Grievance" as registergrievance
+rectangle "Monitor Grievances" as monitor
+rectangle "Complaint details" as complaint 
+rectangle "Status tracking" as tracking 
+rectangle "Update Status" as Update
+rectangle "Database" as Database
+rectangle "Resolved?" as resolved
+rectangle "Appointment to meet Admin" as appointment
+rectangle "Finished" as Finish
+
+login-->newuser 
+newuser-->User :NO
+newuser-->register :Yes
+User-->monitor :Admin
+User-->registergrievance:Student/Staff
+registergrievance-->complaint
+registergrievance-->tracking
+monitor-->Update
+complaint-->Database
+tracking-->Database
+Update--> resolved
+resolved--> Finish:Yes
+resolved-->appointment:NO
+Update-->Database
+@enduml

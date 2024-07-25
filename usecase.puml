@@ -1,0 +1,18 @@
+@startuml
+
+left to right direction
+
+actor Student as "Student"
+actor Database as "Database"
+actor AI_ML_Tool as "AI/ML Tool"
+actor Courses as "Courses"
+
+rectangle "AI/ML Career Guidance Tool" {
+  Student --> (Login)
+  Student --> (Logout)
+  Database --> (Login Credentials)
+  AI_ML_Tool --> (Recommend Career)
+  Courses --> (Get Course Name)
+}
+
+@enduml

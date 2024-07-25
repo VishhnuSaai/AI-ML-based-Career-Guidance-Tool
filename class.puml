@@ -1,0 +1,29 @@
+@startuml
+
+    class Student {
+    - Username: string
+    - Password: string
+    + login()
+    + logout()
+    }
+
+    class Database {
+    - Userdetails
+    + logincredentials()
+    }
+
+    class AI_ML_Tool {
+    - careerpath_prediction
+    + recommendCareer()
+    }
+
+    class Courses {
+    - courseName: string
+    + getCourseName(): string
+    }
+
+Student --> Database
+Student --> AI_ML_Tool
+Student --> Courses
+
+@enduml

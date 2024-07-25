@@ -1,0 +1,14 @@
+@startuml
+
+left to right direction
+
+package "AI/ML Career Guidance Tool" {
+  component "Login Service" as LoginService
+  component "Career Service" as CareerService
+  component "Course Service" as CourseService
+}
+
+LoginService --> CareerService
+LoginService --> CourseService
+
+@enduml
